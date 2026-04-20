@@ -199,3 +199,8 @@ h1, h2, h3 {
     grid-template-columns: 1fr;
   }
 }
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: #475569;
+}
