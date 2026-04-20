@@ -204,3 +204,18 @@ h1, h2, h3 {
   padding: 20px;
   color: #475569;
 }
+.hero p {
+  margin: 6px 0;
+}
+
+.card h2 {
+  color: #1d4ed8;
+}
+
+ul {
+  line-height: 1.7;
+}
+
+.quiz-result {
+  border: 2px solid #bbf7d0;
+}
