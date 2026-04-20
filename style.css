@@ -219,3 +219,8 @@ ul {
 .quiz-result {
   border: 2px solid #bbf7d0;
 }
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: #475569;
+}
