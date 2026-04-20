@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consommation d'énergie chez les êtres vivants</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero" id="accueil">
+    <h1>Consommation d'énergie chez les êtres vivants</h1>
+    <p>Comprendre le cours, manipuler les paramètres, lire les équations et réussir le quiz.</p>
+
+    <nav class="menu">
+      <a href="#accueil">Accueil</a>
+      <a href="#cours">Cours</a>
+      <a href="#equations">Équations</a>
+      <a href="#manipulation">Manipulation</a>
+      <a href="#quiz">Quiz</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card" id="cours">
+      <h2>📘 Cours</h2>
+      <p>
+        Les êtres vivants ont besoin d'énergie pour vivre, grandir, se déplacer, respirer
+        et maintenir leur température.
+      </p>
+      <p>
+        Une partie importante de cette énergie est libérée par la <strong>respiration cellulaire</strong>.
+        Plus l'activité d'un organisme augmente, plus sa consommation d'énergie augmente.
+      </p>
+      <ul>
+        <li>Au repos, l'organisme consomme de l'énergie pour les fonctions vitales.</li>
+        <li>Pendant un effort, la dépense énergétique augmente.</li>
+        <li>La température du milieu peut modifier les besoins énergétiques.</li>
+        <li>L'énergie est utilisée puis dissipée en partie sous forme de chaleur.</li>
+      </ul>
+    </section>
+
+    <section class="card" id="equations">
+      <h2>➕ Équations</h2>
+      <div class="equation-box">
+        <p><strong>Respiration cellulaire simplifiée :</strong></p>
+        <p>Glucose + dioxygène → énergie + dioxyde de carbone + eau</p>
+      </div>
+
+      <div class="equation-box second">
+        <p><strong>Modèle pédagogique de l'application :</strong></p>
+        <p>Dépense énergétique = activité + température + masse corporelle</p>
+      </div>
+    </section>
+
+    <section class="card grid-2" id="manipulation">
+      <div>
+        <h2>🧪 Manipulation scientifique</h2>
+        <p>Fais varier les paramètres pour observer l'effet sur la consommation d'énergie.</p>
+
+        <div class="control-row">
+          <label>🔥 Niveau d'activité</label>
+          <div id="activitySlider"></div>
+          <span id="activityValue">50</span>
+        </div>
+
+        <div class="control-row">
+          <label>❄️ Température du milieu</label>
+          <div id="tempSlider"></div>
+          <span id="tempValue">50</span>
+        </div>
+
+        <div class="control-row">
+          <label>⚖️ Masse corporelle</label>
+          <div id="massSlider"></div>
+          <span id="massValue">50</span>
+        </div>
+
+        <div class="result-panel">
+          <p id="statusText">Consommation d'énergie : 50%</p>
+          <div class="bar-container">
+            <div id="energyBar" class="bar"></div>
+          </div>
+          <p id="explanation">La dépense énergétique est moyenne.</p>
+        </div>
+
+        <button id="resetBtn" class="btn reset">Réinitialiser</button>
+      </div>
+
+      <div>
+        <div id="canvas-holder"></div>
+      </div>
+    </section>
+
+    <section class="card" id="quiz">
+      <h2>📝 Quiz</h2>
+      <form id="quizForm">
+        <div class="question">
+          <p><strong>1. Les êtres vivants ont besoin d'énergie pour :</strong></p>
+          <label><input type="radio" name="q1" value="a"> vivre et assurer leurs fonctions vitales</label>
+          <label><input type="radio" name="q1" value="b"> devenir invisibles</label>
+          <label><input type="radio" name="q1" value="c"> arrêter de respirer</label>
+        </div>
+
+        <div class="question">
+          <p><strong>2. La respiration cellulaire libère :</strong></p>
+          <label><input type="radio" name="q2" value="a"> uniquement du sel</label>
+          <label><input type="radio" name="q2" value="b"> de l'énergie</label>
+          <label><input type="radio" name="q2" value="c"> seulement de la lumière</label>
+        </div>
+
+        <div class="question">
+          <p><strong>3. Quand l'activité augmente, la dépense énergétique :</strong></p>
+          <label><input type="radio" name="q3" value="a"> diminue toujours</label>
+          <label><input type="radio" name="q3" value="b"> augmente souvent</label>
+          <label><input type="radio" name="q3" value="c"> disparaît</label>
+        </div>
+
+        <div class="question">
+          <p><strong>4. Quel paramètre peut aussi faire varier la consommation d'énergie ?</strong></p>
+          <label><input type="radio" name="q4" value="a"> la couleur du ciel</label>
+          <label><input type="radio" name="q4" value="b"> la température du milieu</label>
+          <label><input type="radio" name="q4" value="c"> le nom de l'animal</label>
+        </div>
+
+        <button type="submit" class="btn">Corriger le quiz</button>
+      </form>
+
+      <div id="quizResult" class="quiz-result hidden">
+        <h3>Résultat</h3>
+        <p id="quizScore"></p>
+        <p id="gradeText"></p>
+        <div id="correctionBox"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.4/lib/p5.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
