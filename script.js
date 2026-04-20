@@ -312,3 +312,11 @@ function resetSimulation() {
   localStorage.removeItem("quizPercent");
   localStorage.removeItem("quizMention");
 }
+let mention = "";
+if (percent >= 80) {
+  mention = "Excellent travail";
+} else if (percent >= 50) {
+  mention = "Bon travail";
+} else {
+  mention = "Résultat à améliorer";
+}
